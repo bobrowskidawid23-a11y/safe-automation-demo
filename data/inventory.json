@@ -1,0 +1,5 @@
+[
+  { "id": "DEMO-001", "current": "legacy-a", "target": "standard-a" },
+  { "id": "DEMO-002", "current": "standard-b", "target": "standard-b" },
+  { "id": "DEMO-003", "current": "legacy-c", "target": "standard-c" }
+]

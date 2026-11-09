@@ -1,0 +1,11 @@
+{
+  "name": "safe-automation-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "audit": "node src/cli.js audit",
+    "apply": "node src/cli.js apply"
+  }
+}
