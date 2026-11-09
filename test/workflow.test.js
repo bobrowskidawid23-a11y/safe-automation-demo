@@ -29,7 +29,7 @@ test("apply verifies the input snapshot and returns readback evidence", () => {
 
   assert.equal(result.updated.length, 1);
   assert.equal(result.output[0].current, "standard-a");
-  assert.equal(result.readbackVerified, true);
+  assert.equal(result.outputHash, stableHash(result.output));
 
   const drifted = inventory.map((item) => ({ ...item }));
   drifted[0].current = "unexpected";

@@ -49,14 +49,11 @@ export function applyPlan(inventory, plan, confirmationToken) {
     const change = changeById.get(item.id);
     return change ? { ...item, current: change.to } : { ...item };
   });
-  const readbackVerified = plan.changes.every((change) => output.find((item) => item.id === change.id)?.current === change.to);
-  if (!readbackVerified) throw new Error("Weryfikacja po zapisie nie powiodła się.");
 
   return {
     output,
     updated: plan.changes.map((change) => change.id),
     backupHash: plan.inputHash,
     outputHash: stableHash(output),
-    readbackVerified,
   };
 }

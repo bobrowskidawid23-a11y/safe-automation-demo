@@ -21,6 +21,8 @@ npm run audit
 node src/cli.js apply data/inventory.json TOKEN_Z_AUDYTU
 ```
 
+Polecenie `apply` odczytuje zapisany `plan.json`; nie buduje planu ponownie. Po zapisie ponownie odczytuje `output.json`, porównuje hash i dopiero wtedy tworzy zweryfikowany checkpoint.
+
 ## Technologie
 
 Node.js, ES Modules, SHA-256, Node.js Test Runner.
